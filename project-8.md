@@ -12,7 +12,15 @@ In order to hide all this complexity and to have a single point of access with a
 
 For more information on load balancing, click [here](https://aws.amazon.com/what-is/load-balancing/).
 
-We will be updating solution architecture with a LB added on top of Web Servers. We will be using a software L7 Application LB eg. Apache, NGINX or HAProxy.
+We will be updating solution architecture with a Load balancer added on top of Web Servers. We will be using a software L7 Application load balancer eg. Apache, NGINX or HAProxy.
+
+When you have just one Web server and load increases - you want to serve more and more customers, you can add more CPU and RAM or completely replace the server with a more powerful one – this is called __"vertical scaling"__. This approach has limitations – at some point you reach the maximum capacity of CPU and RAM that can be installed into your server.
+
+Another approach used to cater for increased traffic is __"horizontal scaling"__ – distributing load across multiple Web servers. This approach is much more common and can be applied almost seamlessly and almost infinitely (you can imagine how many server Google has to serve billions of search requests).
+
+Horizontal scaling allows to adapt to current load by adding (scale out) or removing (scale in) Web servers. Adjustment of number of servers can be done manually or automatically.
+
+Property of a system (in our case it is Web tier) to be able to handle growing load by adding resources, is called __"Scalability".__
 
 ## __3-TIER WEB APPLICATION ARCHITECTURE WITH A SINGLE DATABASE, AN NFS SERVER AS A SHARED FILE STORAGE AND A LOAD BALANCER__ ##
 
